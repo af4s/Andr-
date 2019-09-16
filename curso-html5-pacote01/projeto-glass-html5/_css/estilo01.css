@@ -1,0 +1,248 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@font-face {
+	font-family: 'FonteLogo'; 
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+
+body {
+			font-family: arial, sans-serif;
+			background-color: hsla(165, 55%, 93%, 0.5);
+			color: rgba(0,0,0,1);
+		}
+		div#interface {
+			width: 900px;
+			background-color: #ffffff;
+			margin: -20px auto 0px auto; /* parte de fora */			
+			box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+			padding: 10px; /* parte de dentro */
+		}
+	p {
+			text-align: justify;
+			text-indent: 50px;
+		}
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+	position: absolute;
+	left: 1050px;
+	top: 70px;
+
+}
+
+header#cabecalho {
+	border-bottom: 1px #606060 solid;
+	height: 150px;
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
+}
+
+header#cabecalho h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: 10px;
+}
+
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #888888;
+	font-size: 15pt;
+	padding: 0px
+	margin-top: 0px;
+}
+
+/* Formatação de imagens com legendas*/
+
+figure.foto-legenda {
+	position: relative; /* serve para que a figcaption "legeda não fique examente em cima da foto e nao no começo do site" */
+	border: 8px solid white; /* borda e cor da borda ao redor da imagem */
+	box-shadow: 1px 1px 4px black; /* para colocar uma sombra na borda */
+}
+
+figure.foto-legenda img{ /* tudo que for img vai aumentar e diminuit de acordo com que o usuario for aumentar e diminuir a janela do navegador */
+	width: 100%; 
+	height: 100%;
+}
+figure.foto-legenda figcaption {  /* "legenda" */
+	opacity: 0; /* fazer a legena sumir */
+	position: absolute; /* serve para que a legenda fique dentro da imagem e nao fora */
+	top: 0px; /* posição da legenda na imagem, assim ela tipo no inicio e no topo da imagem */
+	background-color: rgba(0,0,0,.4); /* transparencia que fica em volta da legenda */ 
+	color: white; /* cor da letra */
+	width: 100%; /*tamanho da borda que foi criada para ficar na legenda [...] */
+	height: 100%; /* [...] assim ela acaba cobrindo 100% da imagem e não apenas na parte da legenda */
+	padding: 10px; /* criar uma borda */
+	box-sizing: border-box; /* criar uma borda dentro da borda */
+	transition: opacity 1s; /* tempo que vai levar para que a transisão volte a sumir a legenda */
+}
+figure.foto-legenda:hover figcaption {
+	/* para quando passar o mouse por cima esse é o "hover" */
+	opacity: 1; /* que é a mesma coisa que 100% */
+
+}
+
+/* Formatação do menu*/
+
+nav#menu {
+	display: block;
+}
+
+nav#menu ul {
+	list-style: none; /* Retira as marcaçoes do menu */
+	text-transform: uppercase; /* Todas as letras em maiusculas */	
+	position: absolute; /* colocar em qualquer posição na tela para que ele saia do seu lugar e fique livre no site */
+	top: -20px; /* o top e o left servem para conseguir coloca o menu em uma localização especifica no site */
+	left: 550px;
+	transition: background-color 3s;
+}
+
+nav#menu li {
+	display: inline-block; /* os intens ficam ordenados horizontalmente */
+	background-color: #dddddd; /* coloca cor em volta do menu */
+	padding: 10px; /* cria um espaço maior no menu */
+	margin: 2px; /* margem fora do menu para deixar ele mais separado. */
+
+}
+
+nav#menu li:hover { /* o hover serve para quando passar o mouse em cima mudar de cor */
+	background-color: #606060;
+}
+
+nav#memnu h1 {
+	display: none; /* para esconder a frase menu principai no site sem retirar do codigo html */
+}
+
+nav#menu a { /* tira o sublinhado do link do menu e deixa ele cor a cor preta. */
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu a:hover { /* quando passar o mouse por cima vai mudar a cor das letras do menu */
+	color: #ffffff;
+}
+
+section#corpo {
+	display: block;
+	width: 500px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding-right: 15px;
+
+}
+
+article#noticia-principal h2 {
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+
+header#cabecalho-artigo h1 {
+	font-family: 'FonteLogo', sans-serif;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+header#cabecalho-artigo h2 {
+	font-size: 13pt;
+	color: #cecece;
+	background-color: #ffffff;
+	margin: 0px;
+}
+
+.direita {
+	text-align: right;
+}
+header#cabecalho-artigo h3 {
+	font-size:  12px;
+	color: #606060;	
+}
+
+table#tabelaspec {
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+table#tabelaspec td{
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+table#tabelaspec td.ce{
+	color: white;
+	background-color: gray;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table#tabelaspec td.cd{
+	background-color: #cecece;
+
+}
+
+table#tabelaspec caption {
+	color: #8888888;
+	font-size: 13pt;
+	font-weight bold;
+}
+
+table#tabelaspec caption span {
+	display: block;
+	float: right;
+	color: black;
+	font-size: 8pt;
+	margin-top: 10px;
+}
+
+aside#lateral {
+	display: block;
+	width: 350px;
+	float: right;
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-top: 0px;
+}
+aside#lateral h2 {
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px;
+}
+ /*footer#rodape {
+	clear: both;
+	border-top: 1px solid #606060;
+}
+*/
+
+
+footer#rodape p{
+  clear: both;
+  border-top: 1px solid #606060;
+  text-align: center;
+  padding-top: 10px;
+}
